@@ -16,25 +16,20 @@ Domain proyek yang dipilih dalam proyek machine learning ini mengenai **Ekonomi 
     
 ## Business Understanding
 
-Pada bagian ini, kamu perlu menjelaskan proses klarifikasi masalah.
-
-Bagian laporan ini mencakup:
+Pada kasus ini seorang trader atau manajement investasi ingin memprediksi harga sebuah saham microsoft akan tetapi mereka menginginkan keuntungan yang cukup signifikan dan bisa menghindari loss. Mereka memiliki data dengan barbagai macam karakteristik pergerakan harga saham microsoft untuk memprediksi harga sahamnya di masa yang akan datang.
 
 ### Problem Statements
 
-Menjelaskan pernyataan masalah latar belakang:
-- Pernyataan Masalah 1
-- Pernyataan Masalah 2
-- Pernyataan Masalah n
+Berdasarkan latar belakang diatas, berikut rincian masalah yang dapat diselesaikan pada proyek ini :
+
+- Bagaimana cara melakukan pra-pemrosesan data stock saham agar dapat digunakan untuk membuat model yang baik?
+- Bagaimana cara membuat model _machine learning_ untuk memprediksi berdasarkan rentang waktu yang ada?
 
 ### Goals
 
-Menjelaskan tujuan dari pernyataan masalah:
-- Jawaban pernyataan masalah 1
-- Jawaban pernyataan masalah 2
-- Jawaban pernyataan masalah n
-
-Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
+Adapun tujuan dibuatnya proyek ini, yaitu:
+- Melakukan pemrosesan data stock microsoft dengab baik agar dapat digunakan dalam membuat model.
+- Membuat sebuah model _machine learning_ yang dapat memprediksi harga saham microsoft dikemudian hari.
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
 - Menambahkan bagian “Solution Statement” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut: 
