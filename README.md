@@ -51,6 +51,13 @@ Dataset yang saya gunakan pada kasus ini bersumber dari kaggle [Microsoft Stock]
 
 
 ## Visualization Data
+![alternate text](https://github.com/aditbest5/Image-Classification/blob/main/Open-close%20variable.png)
+
+![alternate text](https://github.com/aditbest5/Image-Classification/blob/main/Screenshot%202021-11-18%20204538.png)
+
+![alternate text](https://github.com/aditbest5/Image-Classification/blob/main/Screenshot%202021-11-18%20204611.png)
+
+
 
 
 ## Data Preparation
