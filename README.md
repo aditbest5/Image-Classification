@@ -50,10 +50,17 @@ Dataset yang saya gunakan pada kasus ini bersumber dari kaggle [Microsoft Stock]
 - Volume : Jumlah Transaksi
 
 
-## Visualization Data
+### Visualization Data
+
+Dibawah ini merupakan hasil visualisasi grafik harga open vs price :
+
 ![alternate text](https://github.com/aditbest5/Image-Classification/blob/main/Open-close%20variable.png)
 
+Dibawah ini merupakan hasil visualisasi grafik harga high vs low:
+
 ![alternate text](https://github.com/aditbest5/Image-Classification/blob/main/Screenshot%202021-11-18%20204538.png)
+
+Dan yang terakhir adalah hasil visualisasi chart bar volume dari tahun ke tahun:
 
 ![alternate text](https://github.com/aditbest5/Image-Classification/blob/main/Screenshot%202021-11-18%20204611.png)
 
