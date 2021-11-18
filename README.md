@@ -1,4 +1,4 @@
-# Laporan Proyek Machine Learning - Nama Anda
+# Laporan Proyek Machine Learning - Aditya Aprianto
 
 ## Domain Proyek
 
@@ -31,25 +31,31 @@ Adapun tujuan dibuatnya proyek ini, yaitu:
 - Melakukan pemrosesan data stock microsoft dengab baik agar dapat digunakan dalam membuat model.
 - Membuat sebuah model _machine learning_ yang dapat memprediksi harga saham microsoft dikemudian hari.
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Menambahkan bagian “Solution Statement” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut: 
+### Solution statements
+Solusi yang dapat diterapkan untuk proyek ini antara lain:
 
-    ### Solution statements
-    - Mengajukan 2 atau lebih solution statement. Misalnya, menggunakan dua atau lebih algoritma untuk mencapai solusi yang diinginkan atau melakukan improvement pada baseline model dengan hyperparameter tuning.
-    - Solusi yang diberikan harus dapat terukur dengan metrik evaluasi.
+-   Pada tahap pra-pemrosesan data dapat dilakukan beberapa teknik, diantaranya :
+
+    -   Mengisi data yang kosong dengan nilai metode ffil
+    -   Mengatasi data outlier / pencilan menggunakan interquartil, yaitu membatasi kuartil atas dan kuartil bawah pada data.
+    -   Melakukan **pembagian dataset** menjadi dua bagian dengan rasio 80% untuk data latih dan 20% untuk data uji
+    -   Melakukan **normalisasi data** pada semua fitur data.
+
+- Pada tahap pemodelan dilakukan teknik model time series dengan Long Term Short Memory (LSTM). Aplikasi time series sangat banyak dan luas, mulai dari prakiraan penjualan hingga prakiraan cuaca. Dalam keputusan yang melibatkan faktor ketidakpastian tentang masa depan, model time series telah ditemukan sebagai salah satu metode peramalan yang paling efektif.
 
 ## Data Understanding
-Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Restaurant+%26+consumer+data).
+Dataset yang saya gunakan pada kasus ini bersumber dari kaggle [Microsoft Stock](https://www.kaggle.com/vijayvvenkitesh/microsoft-stock-time-series-analysis) yang memiliki dimensi 1511 rows × 5 columns dengan variabel-variabelnya antara lain:
 
-Selanjutnya uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:  
+- Date : Tanggal transaksi
+- Open : Harga Pembukaan
+- High : Harga Tertinggi
+- Low  : Harga Terendah
+- Close : Harga Penutupan
+- Volume : Jumlah Transaksi
 
-### Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
-- accepts : merupakan jenis pembayaran yang diterima pada restoran tertentu.
-- cuisine : merupakan jenis masakan yang disajikan pada restoran.
-- dst
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
+## Visualization Data
+
 
 ## Data Preparation
 Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
