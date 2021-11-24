@@ -79,7 +79,7 @@ Seperti yang telah disebutkan di bagian solution statement, berikut tahapan-taha
     ![Data NaN](https://github.com/aditbest5/Image-Classification/blob/main/Missing%20value%202.png)
     
  - **Mengatasi data outlier / pencilan menggunakan interquartil, yaitu membatasi kuartil atas dan kuartil bawah pada data**
- - 
+ 
   Nilai outliers (atau yang biasa disebut dengan nilai pencilan) merupakan suatu nilai yang tidak normal. Dalam kata lain, nilai tersebut bernilai jauh sekali dari pusat data. Nilai pencilan ini dapat menyebabkan distorsi terhadap nilai yang asli. 
 Ada beberapa teknik untuk menangani outliers, antara lain:
 1. Hypothesis Testing
@@ -88,7 +88,30 @@ Ada beberapa teknik untuk menangani outliers, antara lain:
 
 Pada kasus ini, outliers akan dideteksi dengan teknik visualisasi data (boxplot). Kemudian, outliers akan ditangani dengan teknik IQR method. IQR adalah singkatan dari Inter Quartile Range. Kuartil dari suatu populasi adalah tiga nilai yang membagi distribusi data menjadi empat sebaran. Seperempat dari data berada di bawah kuartil pertama (Q1), setengah dari data berada di bawah kuartil kedua (Q2), dan tiga perempat dari data berada di kuartil ketiga (Q3). Dengan demikian interquartile range atau IQR = Q3 - Q1.
 
-    ![Boxplot](https://github.com/aditbest5/Image-Classification/blob/main/Outliers.png)
+![alternate text](https://github.com/aditbest5/Image-Classification/blob/main/Outliers.png)
+
+Gambar boxplot diatas tidak menunjukan outlier pada data. Handling outlier tetap dilakukan supaya mendapatkan data yang lebih bersih dan akurat. 
+
+Berikut penggunaan IQR method :
+
+![alternate text](https://github.com/aditbest5/Image-Classification/blob/main/Outliers%202.png)
+
+Setelah melakukan IQR dapat dilihat bahwa data berkurang menjadi 1411 baris. Ini artinya perlakuan membatasi kuartil atas dan kuartil bawah pada data telah berhasil.
+
+- **Melakukanpembagian dataset menjadi dua bagian dengan rasio 80% untuk data latih dan 20% untuk data uji**
+
+Agar dapat menguji performa model pada data sebenarnya, maka perlu dilakukan pembagian dataset kedalam dua atau tiga bagian. Pada proyek ini dilakukan dua bagian saja yakni pada data latih dan data uji dengan rasio 80:20. Data latih dilakukan sepenuhnya untuk melatih model, sedangkan data uji merupakan data yang belum pernah dilihat oleh model dan diharapkan model dapat memiliki performa yang sama baiknya pada data uji seperti pada data latih. Pada bagian ini dipastikan juga pembagian label kategorikal haruslah sama banyak pada data latih dan data uji. Pembagian dataset dilakukan dengan modul [train_test_split](https://scikit-learn.org/0.24/modules/generated/sklearn.model_selection.train_test_split.html#sklearn.model_selection.train_test_split) dari scikit-learn.
+
+- **Melakukan normalisasi data pada semua fitur data**
+
+Tahap terakhir dengan melakukan standarisasi data. Hal ini akan membuat semua fitur numerik berada dalam skala data yang sama juga membuat komputasi dari pembuatan model dapat berjalan lebih cepat karena rentang datanya hanya antara 0-1. Untuk melakukan standarisasi data, digunakan fungsi [MinMaxScaler](https://scikit-learn.org/0.24/modules/generated/sklearn.preprocessing.MinMaxScaler.html#sklearn.preprocessing.MinMaxScaler) yang perhitungannya kurang lebih seperti rumus dibawah ini
+
+    <img width="270" src="https://user-images.githubusercontent.com/58651943/133828773-ee4e17e9-5109-4ac5-96d2-1c07650e6c1f.png" alt="Rumus MinMaxScaler">
+
+
+
+
+
 
 
 ## Modeling
