@@ -71,10 +71,15 @@ Dan yang terakhir adalah hasil visualisasi chart bar volume dari tahun ke tahun:
 Seperti yang telah disebutkan di bagian solution statement, berikut tahapan-tahapan dalam melakukan pra-pemrosesan data:
 
 - **Mengisi data yang kosong dengan nilai metode ffil**
+
     ![Data NaN](https://github.com/aditbest5/Image-Classification/blob/main/Missing%20Value.png)
+    
      Sebenernya tidak perlu melakukan handling missing value karena data yang kosong tidak ada. Tetapi pada data tetap dilakukan handling missing value menggunakan metode ffil seperti gambar dibawah ini :
+     
     ![Data NaN](https://github.com/aditbest5/Image-Classification/blob/main/Missing%20value%202.png)
+    
  - **Mengatasi data outlier / pencilan menggunakan interquartil, yaitu membatasi kuartil atas dan kuartil bawah pada data**
+ - 
   Nilai outliers (atau yang biasa disebut dengan nilai pencilan) merupakan suatu nilai yang tidak normal. Dalam kata lain, nilai tersebut bernilai jauh sekali dari pusat data. Nilai pencilan ini dapat menyebabkan distorsi terhadap nilai yang asli. 
 Ada beberapa teknik untuk menangani outliers, antara lain:
 1. Hypothesis Testing
@@ -82,6 +87,9 @@ Ada beberapa teknik untuk menangani outliers, antara lain:
 3. IQR Method
 
 Pada kasus ini, outliers akan dideteksi dengan teknik visualisasi data (boxplot). Kemudian, outliers akan ditangani dengan teknik IQR method. IQR adalah singkatan dari Inter Quartile Range. Kuartil dari suatu populasi adalah tiga nilai yang membagi distribusi data menjadi empat sebaran. Seperempat dari data berada di bawah kuartil pertama (Q1), setengah dari data berada di bawah kuartil kedua (Q2), dan tiga perempat dari data berada di kuartil ketiga (Q3). Dengan demikian interquartile range atau IQR = Q3 - Q1.
+
+    ![Boxplot](https://github.com/aditbest5/Image-Classification/blob/main/Outliers.png)
+
 
 ## Modeling
 Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
