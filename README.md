@@ -66,7 +66,6 @@ Dan yang terakhir adalah hasil visualisasi chart bar volume dari tahun ke tahun:
 
 
 
-
 ## Data Preparation
 Seperti yang telah disebutkan di bagian solution statement, berikut tahapan-tahapan dalam melakukan pra-pemrosesan data:
 
@@ -106,6 +105,7 @@ Agar dapat menguji performa model pada data sebenarnya, maka perlu dilakukan pem
 
 Tahap terakhir dengan melakukan standarisasi data. Hal ini akan membuat semua fitur numerik berada dalam skala data yang sama juga membuat komputasi dari pembuatan model dapat berjalan lebih cepat karena rentang datanya hanya antara 0-1. Untuk melakukan standarisasi data digunakan fungsi [MinMaxScaler](https://scikit-learn.org/0.24/modules/generated/sklearn.preprocessing.MinMaxScaler.html#sklearn.preprocessing.MinMaxScaler)
 
+
 ## Modeling
 Setelah melakukan pra-pemrosesan data yang baik pada tahap modeling akan dilakukan dua hal, yakni tahap pembuatan model _Time Series_ dan pembuatan model yang dikembangkan.
 
@@ -123,16 +123,28 @@ Selanjutnya untuk arsitektur model gunakan 2 buah layer LSTM. Ketika menggunakan
 ![alternate text](https://github.com/aditbest5/Image-Classification/blob/main/LSTM.png)
 
 
+
+
 ## Evaluation
-Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
 
-Sebagai contoh, Anda memiih kasus klasifikasi dan menggunakan metrik **akurasi, precision, recall, dan F1 score**. Jelaskan mengenai beberapa hal berikut:
-- Penjelasan mengenai metrik yang digunakan
-- Menjelaskan hasil proyek berdasarkan metrik evaluasi
+# Metrik evaluasi
+Pada kasus time series ini saya hanya menggunakan 1 metrik yaitu _Mean Squared Error_ (MSE), alasan saya menggunkan  _Mean Squared Error_ adalah karena  _Mean Squared Error_ ini dapat menghitung eror yang dibuat pada model seperti kita mengevaluasi model regresi dan cukup mudah untuk dipahami serta cocok untuk masalah _Time Series_.  Rumus dari  MSE sendiri adalah sebagai berikut:
 
-Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
+![alternate text](https://github.com/aditbest5/Image-Classification/blob/main/Rumus%20MSE.png)
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
+ Pada gambar dibawah ini hasil dari pengukuran model yang dikembangkan dengan metriks _Mean Squared Error_ :
+ 
+ ![alternate text](https://github.com/aditbest5/Image-Classification/blob/main/Hasil%20MSE.png)
+ 
+ ![alternate text](https://github.com/aditbest5/Image-Classification/blob/main/Grafik%20train%20test.png)
+ 
+ Dari hasil metriks evaluasi tersebut dapat digambarkan grafik perbandingan nilai hasil prediksi dengan nilai aslinya seperti berikut :
+ 
+ ![alternate text](https://github.com/aditbest5/Image-Classification/blob/main/Predict%20model.png)
+ 
+ Hasil nilai prediksi tersebut masih belum mendekati real valuenya dan cenderung menjauhi nilai real valuenya.
+ 
+ 
+ ## _Referensi:_
 
-**---Ini adalah bagian akhir laporan---**
+[[1](https://repository.telkomuniversity.ac.id/pustaka/65748/prediksi-pergerakan-harga-saham-menggunakan-algoritma-memetikaprediction-of-stock-market-price-movement-using-memetic-algorithm.html)] Satria Bakti. PREDIKSI PERGERAKAN HARGA SAHAM MENGGUNAKAN ALGORITMA MEMETIKAPrediction of Stock Market Price Movement Using Memetic Algorithm (2014). https://repository.telkomuniversity.ac.id/pustaka/65748/prediksi-pergerakan-harga-saham-menggunakan-algoritma-memetikaprediction-of-stock-market-price-movement-using-memetic-algorithm.html.
