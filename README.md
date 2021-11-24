@@ -104,23 +104,24 @@ Agar dapat menguji performa model pada data sebenarnya, maka perlu dilakukan pem
 
 - **Melakukan normalisasi data pada semua fitur data**
 
-Tahap terakhir dengan melakukan standarisasi data. Hal ini akan membuat semua fitur numerik berada dalam skala data yang sama juga membuat komputasi dari pembuatan model dapat berjalan lebih cepat karena rentang datanya hanya antara 0-1. Untuk melakukan standarisasi data, digunakan fungsi [MinMaxScaler](https://scikit-learn.org/0.24/modules/generated/sklearn.preprocessing.MinMaxScaler.html#sklearn.preprocessing.MinMaxScaler) yang perhitungannya kurang lebih seperti rumus dibawah ini
-
-    <img width="270" src="https://user-images.githubusercontent.com/58651943/133828773-ee4e17e9-5109-4ac5-96d2-1c07650e6c1f.png" alt="Rumus MinMaxScaler">
-
-
-
-
-
-
+Tahap terakhir dengan melakukan standarisasi data. Hal ini akan membuat semua fitur numerik berada dalam skala data yang sama juga membuat komputasi dari pembuatan model dapat berjalan lebih cepat karena rentang datanya hanya antara 0-1. Untuk melakukan standarisasi data digunakan fungsi [MinMaxScaler](https://scikit-learn.org/0.24/modules/generated/sklearn.preprocessing.MinMaxScaler.html#sklearn.preprocessing.MinMaxScaler)
 
 ## Modeling
-Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
+Setelah melakukan pra-pemrosesan data yang baik pada tahap modeling akan dilakukan dua hal, yakni tahap pembuatan model _Time Series_ dan pembuatan model yang dikembangkan.
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan kelebihan dan kekurangan dari setiap algoritma yang digunakan.
-- Jika menggunakan satu algoritma pada solution statement, lakukan proses improvement terhadap model dengan hyperparameter tuning. **Jelaskan proses improvement yang dilakukan**.
-- Jika menggunakan dua atau lebih algoritma pada solution statement, maka pilih model terbaik sebagai solusi. **Jelaskan mengapa memilih model tersebut sebagai model terbaik**.
+- Model _Time Series_
+
+Pada tahap ini saya menggunakan model _Time Series_ yang menunjukan format waktu dan label data. Time Series adalah rentetan kejadian atau pengamatan diambil secara sekuensial terhadap waktu. jika dilihat secara sekilah data statistik tidak berbeda jauh dengan model time series, namun, ada satu hal yang menjadi pembeda, yaitu dimensi waktu. Dimensi waktu ini berfungsi sebagai sesuatu yang biasa kita sebut feature dalam dunia machine learning. Feature ini dapat memberikan banyak kegunaan dalam pemrosesan dan analisis data, kita dapat mendapat insight, atau kesimpulan terhadap suatu observasi.
+
+fungsi di bawah yang dapat merubah data menjadi format yang dapat diterima oleh model. Fungsi di bawah menerima sebuah series/atribut yang telah di konversi menjadi tipe numpy, lalu mengembalikan label dan atribut dari dataset dalam bentuk batch.
+
+![alternate text](https://github.com/aditbest5/Image-Classification/blob/main/Windowing.png)
+
+- Model _LSTM_
+Selanjutnya untuk arsitektur model gunakan 2 buah layer LSTM. Ketika menggunakan 2 buah layer LSTM, perhatikan bahwa salah satu layer harus memiliki parameter return_sequences yang bernilai True.
+
+![alternate text](https://github.com/aditbest5/Image-Classification/blob/main/LSTM.png)
+
 
 ## Evaluation
 Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
